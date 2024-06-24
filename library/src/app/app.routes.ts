@@ -33,12 +33,21 @@ export const routes: Routes = [
       {
         path: ':id',
         loadComponent: () =>
-          import(
-            './components/book/book.component'
-          ),
+          import('./components/book/book-list/book.component'),
       },
-    ]
+     
+    ],
+  },
+  {
+    path: 'create',
+    loadComponent: () =>
+      import('./components/book/book-create/book-create.component'),
+  },
+  {
+    path: 'update',
+    title:'update',
+    loadComponent: () =>
+      import('./components/book/book-update/book-update.component'),
   },
   { path: '**', redirectTo: '/libros', pathMatch: 'full' },
-
 ];

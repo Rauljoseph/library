@@ -1,6 +1,11 @@
 <main>
     <section>
         <h2>Lista de libros</h2>
+        <div class="container-buttons">
+            <button class="btn btn-primary" (click)="navigatoAddBook()">Agregar Libro</button>
+            <button class="btn btn-primary">Eliminar Libro</button>
+            <button class="btn btn-primary" (click)="navigatoUpdateBook()">Modificar Libro</button>
+        </div>
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
                 <tr>

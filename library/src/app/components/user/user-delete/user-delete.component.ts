@@ -14,14 +14,21 @@ export default class UserDeleteComponent implements OnInit {
   id: number | undefined;
   successMessage = '';
   failedMessage = '';
+  popUpwarning=false
 
   constructor(public userService: UserService) {}
 
   ngOnInit(): void {}
 
+
+  showWarning(){
+    this.popUpwarning=!this.popUpwarning
+  }
+
   deleteUser() {
     this.failedMessage = '';
     this.successMessage = '';
+    this.showWarning()
 
     if (this.id === undefined) {
       return;

@@ -26,3 +26,14 @@ header{
     align-items: center;
     justify-content: center;
 }
+.create{
+    background-color: #e3e39b;
+}
+
+.delete{
+    background-color: #FF0000;
+}
+
+.update{
+    background-color: #5b5bea;
+}

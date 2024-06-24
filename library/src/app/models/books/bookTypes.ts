@@ -7,3 +7,4 @@ export interface Book {
     disponible: boolean
   }
   
+  export type BookWithoutId = Omit<Book, 'id'>;

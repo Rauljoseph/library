@@ -1,0 +1,28 @@
+<main>
+    <form class="form-control">
+        <header>
+            <h2>Agregar Libro</h2>
+        </header>
+        <label for="title" class="label-control">Titulo</label>
+        <input type="text" id="title" class="form-control"  [(ngModel)]="newBook.titulo" name="newBook.titulo">
+        
+        <label for="author" class="label-control">Autor</label>
+        <input type="text" id="author" class="form-control" [(ngModel)]="newBook.autor" name="newBook.autor">
+
+        <label for="isbn" class="label-control">ISBN</label>
+        <input type="text" id="isbn" class="form-control" [(ngModel)]="newBook.isbn" name="newBook.isbn">
+        
+        <label for="genre" class="label-control">Genero</label>
+        <input type="text" id="genre" class="form-control" [(ngModel)]="newBook.genero" name="newBook.genero">
+
+        <button class="btn btn-primary" (click)="validationBook()">Enviar</button>
+
+        @if(failedMessage){
+            <p class="alert alert-danger" role="alert">{{failedMessage}}</p>
+        }
+
+        @if(successMessage){
+            <p class="alert alert-success" role="alert">{{successMessage}}</p>
+        }
+    </form>
+</main>

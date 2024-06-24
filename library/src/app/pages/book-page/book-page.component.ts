@@ -26,8 +26,7 @@ export default class BookPageComponent {
   }
 
   showDetails(book: Book){
-    console.log("show detail");
-    
+
     this.router.navigate(['libros',book.id])
   }
 
@@ -41,5 +40,11 @@ export default class BookPageComponent {
         })
       }
     
+    navigatoAddBook(){
+    this.router.navigate(['create'])
+  } 
+  navigatoUpdateBook(){
+    this.router.navigate(['update'])
+  }
   
 }
