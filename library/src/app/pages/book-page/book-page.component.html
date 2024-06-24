@@ -1,0 +1,33 @@
+<main>
+    <section>
+        <h2>Lista de libros</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Autor</th>
+                    <th>ISBN</th>
+                    <th>Genero</th>
+                    <th>Disponible</th>
+                    <th>Ver libro</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(book of bookList; track book ){
+
+                    <tr>
+                        <td>{{book.id}}</td>
+                        <td>{{book.titulo}}</td>
+                        <td>{{book.autor}}</td>
+                        <td>{{book.isbn}}</td>
+                        <td>{{book.genero}}</td>
+                        <td>{{ getDisponibilidadText(book.disponible)}}</td>
+                        <td><button class="btn btn-primary" (click)="showDetails(book)" >Pulsa aqui</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </section>
+</main>
+<router-outlet></router-outlet>

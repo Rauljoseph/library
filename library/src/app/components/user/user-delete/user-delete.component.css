@@ -1,0 +1,10 @@
+main{
+    min-height: 100vh;
+}
+
+form{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}

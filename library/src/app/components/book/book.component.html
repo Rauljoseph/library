@@ -1,0 +1,30 @@
+<section>
+    <h2>Detalles usuario</h2>
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>ISBN</th>
+                <th>Genero</th>
+                <th>Disponible</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @if(book){
+
+                    <td>{{book.id}}</td>
+                    <td>{{book.titulo}}</td>
+                    <td>{{book.autor}}</td>
+                    <td>{{book.isbn}}</td>
+                    <td>{{book.genero}}</td>
+                    <td>{{getDisponibilidadText(book.disponible)}}</td>
+                    <td><button class="btn btn-primary" (click)="navigateToListBooks()">Volver</button></td>
+                }
+            </tr>    
+        </tbody>
+    </table>
+</section>

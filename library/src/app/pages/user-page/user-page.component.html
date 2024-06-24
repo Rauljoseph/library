@@ -1,0 +1,45 @@
+<!-- <main>
+
+    <form (ngSubmit)="validations()" class="form-control">
+        <header>
+            <h2>Agregar un usuario</h2>
+        </header>
+        <label for="name" class="label-control">Nombre</label>
+        <input type="text" id="name" class="form-control" [(ngModel)]="newUser.nombre" name="nombre">
+    
+        <label for="email" class="label-control">Email</label>
+        <input type="text" id="email" class="form-control" [(ngModel)]="newUser.email" name="email">
+    
+        <label for="password" class="label-control">Password</label>
+        <input type="password" id="password" class="form-control" [(ngModel)]="newUser.password" name="password">
+    
+        <div>
+            <label for="member" class="label-control">Miembro</label>
+            <input type="radio"  id="member" [(ngModel)]="selectedRole" name="selectedRole" value="member">
+
+            <label for="administrator" class="label-control">Administrador</label>
+            <input type="radio"  id="administrator" [(ngModel)]="selectedRole" name="selectedRole" value="administrator">
+        </div>
+        
+        <button class="btn btn-primary" type="submit">Enviar</button>
+
+        @if(message){
+            <p class="alert alert-success" role="alert">{{message}}</p>
+        }
+        @if(errorMessage){
+            <p class="alert alert-danger" role="alert">{{errorMessage}}</p>
+        }
+
+        @if(warningMessage){
+            <p class="alert alert-warning" role="alert">{{warningMessage}}</p>
+        }
+        
+    </form>
+</main> -->
+<div>
+
+    <button (click)="navigateToCreateUser()" class="btn btn-primary">Crear usuario</button>
+    <button (click)="navigateToDeleteUser()" class="btn btn-primary">Eliminar usuario</button>
+    <button (click)="navigateToUpdateUser()" class="btn btn-primary">Actualizar usuario</button>
+</div>
+<router-outlet></router-outlet>

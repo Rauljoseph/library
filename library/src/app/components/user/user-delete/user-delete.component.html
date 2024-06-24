@@ -1,0 +1,17 @@
+<main>
+    <form action="" class="form-control">
+        <header>
+
+            <h2>Eliminar usuario</h2>
+        </header>
+        <label for="id" class="label-control">ID:</label>
+        <input type="number" name="id" id="id" [(ngModel)]="id" class="form-control">
+        <button class="btn btn-primary" (click)="deleteUser()">Enviar</button>
+        @if(failedMessage){
+            <p class="alert alert-danger" role="alert">{{failedMessage}}</p>
+        }
+        @if(successMessage){
+            <p class="alert alert-success" role="alert">{{successMessage}}</p>
+        }
+    </form>
+</main>
