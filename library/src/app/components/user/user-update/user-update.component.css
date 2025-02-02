@@ -1,0 +1,25 @@
+main{
+    min-height: 100vh;
+}
+
+form{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+div{
+    display: flex;
+    gap: 7px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.id-information{
+    display: flex;
+    
+}

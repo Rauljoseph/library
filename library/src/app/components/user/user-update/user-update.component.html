@@ -1,0 +1,43 @@
+<main>
+    <form  class="form-control">
+        <header>
+            <h2>Modificar un usuario</h2>
+        </header>
+        <label for="id" class="label-control">ID</label>
+        <div class="id-information">
+            <input type="number" name="id" id="id" [(ngModel)]="id" class="form-control">
+            <div class="icon">
+                <i class="bi bi-info-circle"></i>
+            </div>
+        </div>
+
+        <label for="name" class="label-control">Nombre</label>
+        <input type="text" id="name" class="form-control" [(ngModel)]="newUser.nombre" name="nombre">
+    
+        <label for="email" class="label-control">Email</label>
+        <input type="text" id="email" class="form-control" [(ngModel)]="newUser.email" name="email">
+    
+        <label for="password" class="label-control">Password</label>
+        <input type="password" id="password" class="form-control" [(ngModel)]="newUser.password" name="password">
+    
+        <div>
+            <label for="member" class="label-control">Miembro</label>
+            <input type="radio"  id="member" [(ngModel)]="selectedRole" name="selectedRole" value="member">
+
+            <label for="administrator" class="label-control">Administrador</label>
+            <input type="radio"  id="administrator" [(ngModel)]="selectedRole" name="selectedRole" value="administrator">
+        </div>
+        
+        <button class="btn btn-primary" (click)="validations()">Enviar</button>
+
+        @if(warningMessage){
+            <p class="alert alert-danger" role="alert">{{warningMessage}}</p>
+        }
+        @if(successMessage){
+            <p class="alert alert-success" role="alert">{{successMessage}}</p>
+        }
+        @if(failedMessage){
+            <p class="alert alert-danger" role="alert">{{failedMessage}}</p>
+        }
+    </form>
+</main>

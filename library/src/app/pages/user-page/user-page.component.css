@@ -1,0 +1,39 @@
+main{
+    min-height: 100vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 320px;
+
+}
+
+div{
+    display: flex;
+    gap: 10px;
+}
+
+.alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create{
+    background-color: #e3e39b;
+}
+
+.delete{
+    background-color: #FF0000;
+}
+
+.update{
+    background-color: #5b5bea;
+}

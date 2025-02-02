@@ -1,0 +1,15 @@
+main{
+    min-height: 100vh;
+}
+
+section{
+    height: 100%;
+}
+
+.container-buttons{
+    margin-left: 5px;
+    width: 50vh;
+    display: flex;
+    gap: 8px;
+    
+}
